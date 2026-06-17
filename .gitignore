@@ -111,3 +111,6 @@ InitTestScene*.unity*
 
 # Mapbox Secrets
 Assets/Resources/Mapbox/MapboxConfiguration.txt
+
+# Firebase Secrets
+Assets/google-services.json
