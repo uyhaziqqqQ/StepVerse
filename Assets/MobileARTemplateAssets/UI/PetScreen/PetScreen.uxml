@@ -1,0 +1,81 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/MobileARTemplateAssets/UI/PetScreen/PetScreen.uss?fileID=7433441132597879392&amp;guid=454f3bb0b1be75c49845acddca9aaaef&amp;type=3#PetScreen"/>
+    
+    <ui:VisualElement name="PetRoot" class="screen-container screen-hidden" style="display: flex; height: 100%; width: 100%; top: -1px; left: 0;">
+        <ui:ScrollView shows-vertical-scroll-indicator="false" class="pet-scrollview">
+            
+            <ui:VisualElement class="header-row">
+                <ui:Label text="Pet Growth" class="page-title"/>
+                <ui:VisualElement class="treat-wallet" style="flex-direction: row; align-items: center;">
+                    <ui:VisualElement class="treat-icon icon-treat" style="-unity-background-scale-mode: scale-to-fit; width: 60px; height: 60px; margin-right: 6px;"/>
+                    <ui:Label name="TxtTotalTreats" text="100" class="treat-amount"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            
+            <ui:VisualElement class="avatar-section">
+                <ui:VisualElement class="pet-viewer-container">
+                   <ui:VisualElement name="PetRenderSurface" class="pet-render-surface">
+                        <!-- Left standard text arrows as text -->
+                        <ui:Label text="↔ Swipe to rotate" picking-mode="Ignore" class="swipe-hint"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement class="level-badge">
+                    <ui:Label text="LEVEL 12" name="TxtPetLevel" class="level-text"/>
+                </ui:VisualElement>
+                <ui:Label text="Mossy" name="TxtPetName" class="pet-name"/>
+                <ui:Label text="Sapling Stage" name="TxtPetStage" class="pet-stage"/>
+            </ui:VisualElement>
+            
+            <ui:VisualElement class="action-row">
+                <ui:Button name="BtnFeed" class="action-btn btn-orange" style="flex-direction: row; justify-content: center; align-items: center;">
+                    <ui:VisualElement class="icon-treat" style="width: 60px; height: 60px; -unity-background-scale-mode: scale-to-fit; margin-right: 8px;"/>
+                    <ui:Label text="Feed" class="btn-text text-white"/>
+                </ui:Button>
+                
+                <ui:Button name="BtnPlay" class="action-btn btn-outline" style="flex-direction: row; justify-content: center; align-items: center;">
+                    <ui:VisualElement class="icon-play" style="width: 60px; height: 60px; -unity-background-scale-mode: scale-to-fit; margin-right: 8px;"/>
+                    <ui:Label text="Play" class="btn-text text-orange"/>
+                </ui:Button>
+            </ui:VisualElement>
+            
+            <ui:VisualElement class="progress-section">
+                <ui:Label text="Evolution Progress" class="section-title"/>
+                <ui:Label text="Feed delicious treats to spark your pet&apos;s next evolution!" class="section-subtitle"/>
+                <ui:VisualElement class="progress-bar-container">
+                    <ui:VisualElement class="progress-track">
+                        <ui:VisualElement name="XpFillBar" class="progress-fill"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Label text="1,240 / 2,000" name="TxtXPProgress" class="progress-numbers text-orange"/>
+            </ui:VisualElement>
+            
+            <ui:VisualElement class="chain-section">
+                <ui:Label text="Evolution Chain" class="section-title"/>
+                <ui:VisualElement class="chain-container">
+                    <ui:VisualElement class="connecting-line"/>
+                    <ui:VisualElement class="nodes-row">
+                        <ui:VisualElement class="node-wrapper">
+                            <ui:VisualElement name="EvoIcon1" class="chain-circle active-circle"/>
+                            <ui:Label text="Sapling" name="TxtEvo1" class="node-label text-orange"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="node-wrapper">
+                            <ui:VisualElement name="EvoIcon2" class="chain-circle locked-circle">
+                                <!-- Standard text ? symbol, kept as text -->
+                                <ui:Label text="?" class="node-icon text-grey"/>
+                            </ui:VisualElement>
+                            <ui:Label text="???" name="TxtEvo2" class="node-label text-grey"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="node-wrapper">
+                            <ui:VisualElement name="EvoIcon3" class="chain-circle locked-circle">
+                                <!-- Standard text ? symbol, kept as text -->
+                                <ui:Label text="?" class="node-icon text-grey"/>
+                            </ui:VisualElement>
+                            <ui:Label text="???" name="TxtEvo3" class="node-label text-grey"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

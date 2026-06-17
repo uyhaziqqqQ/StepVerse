@@ -1,0 +1,94 @@
+/* --- Global & Animation --- */
+.screen-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FDF7EC;
+    opacity: 1;
+    display: flex;
+}
+
+.screen-hidden {
+    display: none; /* Instant hide for tab swapping */
+}
+
+.profile-scrollview {
+    flex-grow: 1;
+    padding: 60px 40px;
+    padding-bottom: 180px; /* Crucial: Keeps content above the bottom nav */
+}
+
+/* --- Header --- */
+.profile-header { align-items: center; margin-bottom: 40px; }
+.avatar-wrapper { width: 220px; height: 220px; margin-bottom: 20px; align-items: center; justify-content: center; }
+.avatar-circle { width: 200px; height: 200px; border-radius: 100px; background-color: #E2D5C4; align-items: center; justify-content: center; border-width: 6px; border-color: #FFFFFF; }
+.avatar-icon { font-size: 100px; }
+.edit-badge { position: absolute; bottom: 10px; right: 15px; width: 60px; height: 60px; background-color: #FCDF76; border-radius: 30px; align-items: center; justify-content: center; border-width: 4px; border-color: #FFFFFF; }
+.edit-icon { font-size: 25px; }
+
+.user-name { font-size: 55px; -unity-font-style: bold; color: #2D1B0A; }
+.user-subtitle { font-size: 28px; color: #5C4033; margin-top: 5px; }
+
+/* --- Stats Row --- */
+.stats-row { flex-direction: row; justify-content: space-between; margin-bottom: 40px; }
+.stat-card { width: 31%; background-color: #FFFFFF; border-radius: 30px; padding: 25px 10px; align-items: center; }
+.stat-icon { font-size: 45px; margin-bottom: 15px; }
+.stat-value { font-size: 38px; -unity-font-style: bold; color: #2D1B0A; }
+.stat-label { font-size: 22px; color: #A08C7F; margin-top: 5px; }
+
+.icon-green { -unity-text-outline-color: #8FD1C5; color: #8FD1C5; }
+.icon-yellow { -unity-text-outline-color: #FCDF76; color: #FCDF76; }
+.icon-red { -unity-text-outline-color: #FF8A65; color: #FF8A65; }
+.icon-blue { -unity-text-outline-color: #64B5F6; color: #64B5F6; }
+
+/* --- Sections & Cards --- */
+.section-title { font-size: 32px; -unity-font-style: bold; color: #2D1B0A; margin-bottom: 20px; margin-left: 10px; }
+.card-container { background-color: #FFFFFF; border-radius: 40px; padding: 35px; margin-bottom: 40px; }
+
+/* --- Fitness Goals --- */
+.goal-header { flex-direction: row; align-items: center; margin-bottom: 30px; }
+.goal-icon { font-size: 50px; margin-right: 20px; background-color: #FDF7EC; border-radius: 20px; padding: 15px; }
+.goal-title { font-size: 32px; -unity-font-style: bold; color: #2D1B0A; }
+.goal-subtitle { font-size: 24px; color: #A08C7F; }
+.goal-target { font-size: 45px; -unity-font-style: bold; color: #E67E22; }
+
+.slider-wrapper { flex-direction: row; align-items: center; justify-content: space-between; }
+.slider-label { font-size: 24px; color: #A08C7F; }
+.custom-slider { flex-grow: 1; margin: 0 20px; }
+.custom-slider .unity-base-slider__tracker { background-color: #FDF7EC; height: 16px; border-radius: 8px; border-width: 0; }
+.custom-slider .unity-base-slider__dragger { width: 40px; height: 40px; border-radius: 20px; background-color: #FCDF76; border-width: 4px; border-color: #FFFFFF; margin-top: -12px; }
+
+/* --- Settings --- */
+.settings-container { padding: 15px 35px; }
+.setting-row { flex-direction: row; align-items: center; padding: 20px 0; border-bottom-width: 2px; border-color: #FDF7EC; }
+.setting-icon-box { font-size: 40px; width: 80px; height: 80px; background-color: #FDF7EC; border-radius: 25px; align-items: center; justify-content: center; margin-right: 20px; }
+.setting-text-box { flex-grow: 1; }
+.setting-title { font-size: 30px; -unity-font-style: bold; color: #2D1B0A; }
+.setting-desc { font-size: 22px; color: #A08C7F; }
+
+/* Standard Unity Toggle override for greyboxing */
+.custom-toggle { align-self: center; }
+.custom-toggle .unity-toggle__checkmark { width: 70px; height: 40px; border-radius: 20px; background-color: #E2D5C4; border-width: 0; }
+.custom-toggle:checked .unity-toggle__checkmark { background-color: #FCDF76; }
+
+/* --- Privacy & Sign Out --- */
+.menu-button { flex-direction: row; align-items: center; background-color: transparent; border-width: 0; padding: 0; }
+.menu-button-text { font-size: 30px; -unity-font-style: bold; color: #2D1B0A; }
+.menu-arrow { font-size: 30px; color: #A08C7F; -unity-font-style: bold; }
+
+.signout-button { margin-top: 20px; background-color: #FFFFFF; border-width: 3px; border-color: #FF8A65; border-radius: 40px; height: 100px; justify-content: center; align-items: center; transition-property: scale; transition-duration: 0.1s; }
+.signout-button:active { scale: 0.95; }
+.signout-text { font-size: 32px; -unity-font-style: bold; color: #FF8A65; }
+
+/* Custom Icons */
+.icon-head { background-image: url('project://database/Assets/ICON_img/head.png'); -unity-background-scale-mode: scale-to-fit; width: 100%; height: 100%; }
+.icon-pencil { background-image: url('project://database/Assets/ICON_img/pencil.png'); -unity-background-scale-mode: scale-to-fit; width: 100%; height: 100%; }
+.icon-footsteps { background-image: url('project://database/Assets/ICON_img/footsteps.png'); -unity-background-scale-mode: scale-to-fit; width: 60px; height: 60px; }
+.icon-footprint { background-image: url('project://database/Assets/ICON_img/footprint.png'); -unity-background-scale-mode: scale-to-fit; width: 60px; height: 60px; }
+.icon-fire2 { background-image: url('project://database/Assets/ICON_img/fire.png'); -unity-background-scale-mode: scale-to-fit; width: 60px; height: 60px; }
+.icon-flag { background-image: url('project://database/Assets/ICON_img/red-flag.png'); -unity-background-scale-mode: scale-to-fit; width: 60px; height: 60px; margin-right: 12px; }
+.icon-volume { background-image: url('project://database/Assets/ICON_img/medium-volume.png'); -unity-background-scale-mode: scale-to-fit; width: 60px; height: 60px; }
+.icon-music { background-image: url('project://database/Assets/ICON_img/music-player.png'); -unity-background-scale-mode: scale-to-fit; width: 60px; height: 60px; }
+.icon-vibration { background-image: url('project://database/Assets/ICON_img/vibration.png'); -unity-background-scale-mode: scale-to-fit; width: 60px; height: 60px; }
+.icon-location { background-image: url('project://database/Assets/ICON_img/location.png'); -unity-background-scale-mode: scale-to-fit; width: 60px; height: 60px; }
+.icon-logout { background-image: url('project://database/Assets/ICON_img/logout.png'); -unity-background-scale-mode: scale-to-fit; width: 60px; height: 60px; margin-right: 8px; }

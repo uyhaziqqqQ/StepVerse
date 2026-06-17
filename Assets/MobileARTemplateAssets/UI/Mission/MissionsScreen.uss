@@ -1,0 +1,64 @@
+/* --- Global --- */
+.screen-container { position: absolute; width: 100%; height: 100%; background-color: #FDF7EC; display: flex; }
+.screen-hidden { display: none; }
+.missions-scrollview { flex-grow: 1; padding: 60px 40px; padding-bottom: 180px; }
+
+/* --- Header & Progress --- */
+.header-row { flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.page-title { font-size: 60px; -unity-font-style: bold; color: #2D1B0A; }
+.history-button { background-color: #FFFFFF; border-width: 2px; border-color: #E2D5C4; border-radius: 20px; font-size: 24px; padding: 10px 20px; color: #2D1B0A; -unity-font-style: bold; }
+
+.progress-header { flex-direction: row; align-items: center; justify-content: space-between; margin-bottom: 40px; }
+.timer-box { background-color: #FFF3E0; padding: 10px 15px; border-radius: 15px; }
+.timer-text { font-size: 22px; color: #E65100; -unity-font-style: bold; }
+.progress-text { font-size: 22px; color: #2D1B0A; -unity-font-style: bold; margin-bottom: 5px; }
+
+.mini-progress-track { width: 150px; height: 10px; background-color: #E2D5C4; border-radius: 5px; }
+.mini-progress-fill { height: 100%; background-color: #8FD1C5; border-radius: 5px; }
+
+/* --- Mission Cards --- */
+.mission-card { background-color: #FFFFFF; border-radius: 40px; padding: 35px; margin-bottom: 30px; border-left-width: 15px; }
+.border-yellow { border-left-color: #FCDF76; }
+.border-orange { border-left-color: #FFB74D; }
+.border-green { border-left-color: #8FD1C5; }
+.border-purple { border-left-color: #BA68C8; }
+
+.mission-row { flex-direction: row; align-items: center; }
+.mission-icon-box { width: 90px; height: 90px; border-radius: 30px; align-items: center; justify-content: center; margin-right: 20px; }
+.mission-icon { font-size: 45px; }
+.mission-details { flex-grow: 1; flex-shrink: 1; margin-right: 10px; }
+
+.mission-title { font-size: 36px; -unity-font-style: bold; color: #2D1B0A; margin-bottom: 5px; }
+.mission-desc { font-size: 24px; color: #A08C7F; }
+.mission-tag { font-size: 20px; -unity-font-style: bold; letter-spacing: 2px; margin-bottom: 5px; }
+.tag-pill { padding: 5px 15px; border-radius: 15px; align-self: flex-start; }
+
+.bg-yellow { background-color: #FFF9C4; }
+.bg-orange { background-color: #FFE0B2; }
+.bg-green { background-color: #E0F2F1; }
+.bg-purple { background-color: #F3E5F5; }
+
+.text-orange { color: #F57C00; }
+.text-green { color: #00897B; }
+.text-purple { color: #8E24AA; }
+.text-white { color: #FFFFFF; background-color: #BA68C8; }
+
+/* --- Card Progress Bars --- */
+.mission-progress-row { flex-direction: row; align-items: center; margin-top: 25px; }
+.progress-number { font-size: 26px; color: #A08C7F; }
+.bold { -unity-font-style: bold; color: #2D1B0A; }
+.card-progress-track { flex-grow: 1; height: 16px; background-color: #FDF7EC; border-radius: 8px; margin: 0 15px; }
+.card-progress-fill { 
+    height: 100%; 
+    border-radius: 8px; 
+    transition-property: width; 
+    transition-duration: 0.8s; 
+    transition-timing-function: ease-out; 
+}
+
+/* --- Claim Reward Button --- */
+.claim-button { margin-top: 25px; border-radius: 25px; height: 80px; justify-content: center; align-items: center; border-width: 0; background-color: #26A69A; transition-duration: 0.1s; }
+.claim-button:active { scale: 0.95; opacity: 0.8; }
+.claim-text { font-size: 30px; -unity-font-style: bold; color: #FFFFFF; }
+
+.section-divider { font-size: 22px; color: #A08C7F; -unity-font-style: bold; text-align: center; margin: 20px 0 30px 0; letter-spacing: 2px; }

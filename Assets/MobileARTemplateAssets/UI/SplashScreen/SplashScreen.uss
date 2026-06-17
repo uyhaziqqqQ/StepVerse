@@ -1,0 +1,108 @@
+/* --- Global Layout --- */
+.screen-container {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FDF7EC; /* Swapped broken gradient for a solid warm cream */
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.spacer-top {
+    height: 10%;
+}
+
+/* --- Typography --- */
+.title-text {
+    font-size: 90px;
+    -unity-font-style: bold;
+    color: #4A2B12;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.subtitle-text {
+    font-size: 36px;
+    color: #5C4033;
+}
+
+.btn-text {
+    font-size: 42px;
+    -unity-font-style: bold;
+    color: #2D1B0A;
+}
+
+.footer-text {
+    font-size: 28px;
+    color: #A08C7F;
+    margin-bottom: 60px;
+}
+
+/* --- Logo Box --- */
+.logo-container {
+    align-items: center;
+    margin-top: 50px; /* Gives a bit of breathing room from the top */
+}
+
+.logo-box {
+    width: 280px;
+    height: 280px;
+    min-width: 280px; /* Forces it to stay this wide */
+    min-height: 280px; /* Forces it to stay this tall */
+    flex-shrink: 0; /* Prevents the Flexbox engine from squishing it */
+    background-color: #FCDF76;
+    border-radius: 60px;
+    
+    /* We don't need justify/align here anymore since children are absolute */
+}
+
+.logo-icon-main {
+    font-size: 140px;
+    color: white;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+
+.logo-icon-sub {
+    font-size: 85px;       /* Scaled down slightly to balance with the paws */
+    position: absolute;
+    bottom: 50px;          /* Pulled higher up into the yellow box */
+    right: 45px;           /* Pulled further left into the yellow box */
+    rotate: -15deg;        /* Adds a dynamic "stepping" angle! */
+}
+
+/* --- Buttons --- */
+.button-container {
+    width: 85%;
+    max-width: 900px;
+    margin-top: 100px;
+}
+
+.primary-button {
+    height: 130px;
+    border-radius: 65px;
+    border-width: 0;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    
+    transition-property: scale, opacity;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+.btn-green {
+    background-color: #A9ECA4;
+}
+
+.btn-orange {
+    background-color: #FFC089;
+}
+
+/* The magic hover/press squish effect */
+.primary-button:active {
+    scale: 0.92;
+    opacity: 0.8;
+}

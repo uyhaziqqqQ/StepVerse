@@ -1,0 +1,25 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="ChestDiscoveryPopup.uss"/>
+    
+    <ui:VisualElement name="DiscoveryOverlay" class="overlay hidden">
+        <ui:VisualElement class="discovery-card">
+            
+            <ui:VisualElement style="flex-direction: row; justify-content: center; align-items: center;">
+                <ui:VisualElement style="width: 60px; height: 60px; background-image: url('project://database/Assets/ICON_img/treasure-map.png'); -unity-background-scale-mode: scale-to-fit; margin-right: 15px;"/>
+                <ui:Label text="Treasure Nearby!" class="discovery-title"/>
+            </ui:VisualElement>
+            
+            <ui:Label text="A hidden chest has spawned in your area! Do you want to track it down?" class="discovery-desc"/>
+            
+            <ui:VisualElement class="button-row">
+                <ui:Button name="BtnDecline" class="btn btn-outline">
+                    <ui:Label text="Ignore" class="btn-text text-grey"/>
+                </ui:Button>
+                <ui:Button name="BtnAccept" class="btn btn-orange">
+                    <ui:Label text="Track It!" class="btn-text text-white"/>
+                </ui:Button>
+            </ui:VisualElement>
+            
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,215 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/MobileARTemplateAssets/UI/HomeScreen/HomeScreen.uss?fileID=7433441132597879392&amp;guid=f17fff79f08d05845b48910754c02ef4&amp;type=3#HomeScreen"/>
+    
+    <ui:VisualElement name="HomeScreenRoot" class="screen-container screen-hidden-right" style="opacity: 1; height: 100%; width: 100%; top: 0; left: -1px;">
+        
+        <ui:VisualElement class="header-container">
+            <!-- Added flex-shrink to prevent long names from blowing up the screen width! -->
+            <ui:VisualElement class="user-greeting-box" style="flex-shrink: 1; min-width: 0;">
+                <ui:VisualElement class="mini-avatar">
+                    <!-- Replaced 🧑 emoji -->
+                    <ui:VisualElement class="mini-avatar-icon" style="width: 100%; height: 100%; background-image: url('project://database/Assets/ICON_img/head.png'); -unity-background-scale-mode: scale-to-fit;"/>
+                </ui:VisualElement>
+                <ui:Label name="TxtGreeting" text="Good Morning, Walker!" class="greeting-text" style="flex-shrink: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"/>
+            </ui:VisualElement>
+            
+            <ui:VisualElement style="flex-direction: row; flex-shrink: 0;">
+                <!-- Replaced 🎒 emoji -->
+                <ui:Button name="BtnInventory" class="icon-button" style="margin-right: 15px; justify-content: center; align-items: center;">
+                    <ui:VisualElement style="width: 60px; height: 60px; background-image: url('project://database/Assets/ICON_img/backpack.png'); -unity-background-scale-mode: scale-to-fit;"/>
+                </ui:Button>
+                <!-- Replaced 👤 emoji -->
+                <ui:Button name="BtnTopProfile" class="icon-button" style="justify-content: center; align-items: center;">
+                    <ui:VisualElement style="width: 60px; height: 60px; background-image: url('project://database/Assets/ICON_img/user.png'); -unity-background-scale-mode: scale-to-fit;"/>
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="map-viewer-container">
+            <ui:VisualElement name="MapRenderSurface" class="map-render-surface" />
+        </ui:VisualElement>
+        
+        <ui:Button name="BtnStepStats" class="steps-container">
+            <ui:VisualElement class="steps-row">
+                <ui:Label name="TxtStepCount" text="0" class="step-number"/>
+                <ui:Label text="+" class="step-plus"/>
+            </ui:VisualElement>
+            <!-- Replaced 🚶 emoji -->
+            <ui:VisualElement class="distance-badge" style="flex-direction: row; align-items: center; justify-content: center;">
+                <ui:VisualElement class="distance-icon" style="width: 60px; height: 68px; background-image: url('project://database/Assets/ICON_img/walking.png'); -unity-background-scale-mode: scale-to-fit; margin-right: 6px;"/>
+                <ui:Label name="TxtDistance" text="0.0 km travelled" class="distance-text" style="font-size: 30px; -unity-font-style: bold-and-italic;"/>
+            </ui:VisualElement>
+        </ui:Button>
+
+        <ui:VisualElement class="goal-container">
+            <ui:VisualElement class="goal-header">
+                <!-- Replaced 🏆 emoji inside text -->
+                <ui:VisualElement style="flex-direction: row; align-items: center;">
+                    <ui:VisualElement style="width: 60px; height: 60px; background-image: url('project://database/Assets/ICON_img/trophy.png'); -unity-background-scale-mode: scale-to-fit; margin-right: 8px;"/>
+                    <ui:Label text="Daily Goal" class="goal-title" style="font-size: 44px;"/>
+                </ui:VisualElement>
+                <ui:Label name="TxtDailyGoal" text="10,000" class="goal-target"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="progress-track">
+                <ui:VisualElement name="DailyProgressBar" class="progress-fill" style="width: 0%;"/>
+            </ui:VisualElement>
+            <ui:Label name="TxtGoalMotivation" text="Let's get moving!" class="goal-motivation"/>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="level-container">
+            <ui:VisualElement class="level-header">
+                <!-- Replaced 🍃 emoji inside text -->
+                <ui:VisualElement style="flex-direction: row; align-items: center;">
+                    <ui:VisualElement style="width: 72px; height: 76px; background-image: url('project://database/Assets/ICON_img/paws.png'); -unity-background-scale-mode: scale-to-fit; margin-right: 8px;"/>
+                    <ui:Label text="Level" class="level-title" style="width: 123px; height: 70px; font-size: 44px;"/>
+                </ui:VisualElement>
+                <ui:Label name="TxtPlayerLevel" text="Lvl 3" class="level-number"/>
+            </ui:VisualElement>
+            <ui:Label text="Junior Form" name="TxtPlayerRank" class="form-title" style="display: flex;"/>
+            <ui:VisualElement class="progress-track level-track">
+                <ui:VisualElement name="XpProgressBar" class="progress-fill level-fill" style="width: 35%;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="InventoryModal" class="modal-overlay modal-hidden">
+            <ui:VisualElement name="InventorySheet" class="bottom-sheet">
+                
+                <ui:VisualElement class="sheet-header">
+                    <!-- Replaced 🎒 emoji inside text -->
+                    <ui:VisualElement style="flex-direction: row; align-items: center;">
+                        <ui:VisualElement style="width: 60px; height: 60px; background-image: url('project://database/Assets/ICON_img/backpack.png'); -unity-background-scale-mode: scale-to-fit; margin-right: 8px;"/>
+                        <ui:Label name="TxtInventoryTitle" text="Backpack" class="sheet-title"/>
+                    </ui:VisualElement>
+                    <ui:Button name="BtnCloseInventory" text="" class="close-btn icon-close"/>
+                </ui:VisualElement>
+
+                <ui:VisualElement class="inventory-grid">
+                    
+                    <!-- Lvl Boost Slot -->
+                    <ui:Button name="BtnUseLvlBoost" class="item-slot" style="flex-direction: row; justify-content: space-between; align-items: center; padding: 10px;">
+                        <ui:Button name="BtnInfoLvlBoost" class="item-info-btn" style="width: 20%; background-color: transparent; border-width: 0; justify-content: center; align-items: center;">
+                            <!-- Replaced ℹ️ info emoji -->
+                            <ui:VisualElement class="item-info-icon" style="width: 30px; height: 30px; background-image: url('project://database/Assets/ICON_img/info.png'); -unity-background-scale-mode: scale-to-fit;"/>
+                        </ui:Button>
+                        <ui:VisualElement class="item-center-container" style="width: 60%; flex-grow: 1; align-items: center; justify-content: center;">
+                            <!-- Replaced ⭐ star emoji -->
+                            <ui:VisualElement class="item-icon" style="width: 60px; height: 60px; background-image: url('project://database/Assets/ICON_img/star.png'); -unity-background-scale-mode: scale-to-fit; margin-bottom: 5px;"/>
+                            <ui:Label text="Lvl Boost" class="item-name" style="font-size: 20px;"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="item-count-container" style="width: 20%; align-items: center; justify-content: center;">
+                            <ui:Label name="TxtCountLvlBoost" text="x2" class="item-count" style="font-size: 24px;"/>
+                        </ui:VisualElement>
+                    </ui:Button>
+
+                    <!-- Streak Save Slot -->
+                    <ui:Button name="BtnUseStreakSave" class="item-slot" style="flex-direction: row; justify-content: space-between; align-items: center; padding: 10px;">
+                        <ui:Button name="BtnInfoStreakSave" class="item-info-btn" style="width: 20%; background-color: transparent; border-width: 0; justify-content: center; align-items: center;">
+                            <!-- Replaced ℹ️ info emoji -->
+                            <ui:VisualElement class="item-info-icon" style="width: 30px; height: 30px; background-image: url('project://database/Assets/ICON_img/info.png'); -unity-background-scale-mode: scale-to-fit;"/>
+                        </ui:Button>
+                        <ui:VisualElement class="item-center-container" style="width: 60%; flex-grow: 1; align-items: center; justify-content: center;">
+                            <!-- Replaced 🔥 fire emoji -->
+                            <ui:VisualElement class="item-icon" style="width: 60px; height: 60px; background-image: url('project://database/Assets/ICON_img/fire.png'); -unity-background-scale-mode: scale-to-fit; margin-bottom: 5px;"/>
+                            <ui:Label text="Streak Save" class="item-name" style="font-size: 20px;"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="item-count-container" style="width: 20%; align-items: center; justify-content: center;">
+                            <ui:Label name="TxtCountStreakSave" text="x5" class="item-count" style="font-size: 24px;"/>
+                        </ui:VisualElement>
+                    </ui:Button>
+
+                    <!-- 2x Steps Slot -->
+                    <ui:Button name="BtnUseDoubleSteps" class="item-slot" style="flex-direction: row; justify-content: space-between; align-items: center; padding: 10px;">
+                        <ui:Button name="BtnInfoDoubleSteps" class="item-info-btn" style="width: 20%; background-color: transparent; border-width: 0; justify-content: center; align-items: center;">
+                            <!-- Replaced ℹ️ info emoji -->
+                            <ui:VisualElement class="item-info-icon" style="width: 30px; height: 30px; background-image: url('project://database/Assets/ICON_img/info.png'); -unity-background-scale-mode: scale-to-fit;"/>
+                        </ui:Button>
+                        <ui:VisualElement class="item-center-container" style="width: 60%; flex-grow: 1; align-items: center; justify-content: center;">
+                            <!-- Replaced ⚡ lighting emoji -->
+                            <ui:VisualElement class="item-icon" style="width: 60px; height: 60px; background-image: url('project://database/Assets/ICON_img/lighting.png'); -unity-background-scale-mode: scale-to-fit; margin-bottom: 5px;"/>
+                            <ui:Label text="2x Steps" class="item-name" style="font-size: 20px;"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="item-count-container" style="width: 20%; align-items: center; justify-content: center;">
+                            <ui:Label name="TxtCountDoubleSteps" text="x1" class="item-count" style="font-size: 24px;"/>
+                        </ui:VisualElement>
+                    </ui:Button>
+
+                    <!-- Loot Radar Slot -->
+                    <ui:Button name="BtnUseLootRadar" class="item-slot" style="flex-direction: row; justify-content: space-between; align-items: center; padding: 10px;">
+                        <ui:Button name="BtnInfoLootRadar" class="item-info-btn" style="width: 20%; background-color: transparent; border-width: 0; justify-content: center; align-items: center;">
+                            <!-- Replaced ℹ️ info emoji -->
+                            <ui:VisualElement class="item-info-icon" style="width: 30px; height: 30px; background-image: url('project://database/Assets/ICON_img/info.png'); -unity-background-scale-mode: scale-to-fit;"/>
+                        </ui:Button>
+                        <ui:VisualElement class="item-center-container" style="width: 60%; flex-grow: 1; align-items: center; justify-content: center;">
+                            <!-- Replaced 📡 satelite emoji -->
+                            <ui:VisualElement class="item-icon" style="width: 60px; height: 60px; background-image: url('project://database/Assets/ICON_img/satelite.png'); -unity-background-scale-mode: scale-to-fit; margin-bottom: 5px;"/>
+                            <ui:Label text="Loot Radar" class="item-name" style="font-size: 20px;"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="item-count-container" style="width: 20%; align-items: center; justify-content: center;">
+                            <ui:Label name="TxtCountLootRadar" text="x3" class="item-count" style="font-size: 24px;"/>
+                        </ui:VisualElement>
+                    </ui:Button>
+
+                    <!-- Treat Pinata Slot -->
+                    <ui:Button name="BtnUseTreatPinata" class="item-slot" style="flex-direction: row; justify-content: space-between; align-items: center; padding: 10px;">
+                        <ui:Button name="BtnInfoTreatPinata" class="item-info-btn" style="width: 20%; background-color: transparent; border-width: 0; justify-content: center; align-items: center;">
+                            <!-- Replaced ℹ️ info emoji -->
+                            <ui:VisualElement class="item-info-icon" style="width: 30px; height: 30px; background-image: url('project://database/Assets/ICON_img/info.png'); -unity-background-scale-mode: scale-to-fit;"/>
+                        </ui:Button>
+                        <ui:VisualElement class="item-center-container" style="width: 60%; flex-grow: 1; align-items: center; justify-content: center;">
+                            <!-- Replaced 🪅 party emoji -->
+                            <ui:VisualElement class="item-icon" style="width: 60px; height: 60px; background-image: url('project://database/Assets/ICON_img/party.png'); -unity-background-scale-mode: scale-to-fit; margin-bottom: 5px;"/>
+                            <ui:Label text="Treat Piñata" class="item-name" style="font-size: 20px;"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="item-count-container" style="width: 20%; align-items: center; justify-content: center;">
+                            <ui:Label name="TxtCountTreatPinata" text="x0" class="item-count" style="font-size: 24px;"/>
+                        </ui:VisualElement>
+                    </ui:Button>
+
+                    <!-- Auto Fetch Slot -->
+                    <ui:Button name="BtnUseAutoFetch" class="item-slot" style="flex-direction: row; justify-content: space-between; align-items: center; padding: 10px;">
+                        <ui:Button name="BtnInfoAutoFetch" class="item-info-btn" style="width: 20%; background-color: transparent; border-width: 0; justify-content: center; align-items: center;">
+                            <!-- Replaced ℹ️ info emoji -->
+                            <ui:VisualElement class="item-info-icon" style="width: 30px; height: 30px; background-image: url('project://database/Assets/ICON_img/info.png'); -unity-background-scale-mode: scale-to-fit;"/>
+                        </ui:Button>
+                        <ui:VisualElement class="item-center-container" style="width: 60%; flex-grow: 1; align-items: center; justify-content: center;">
+                            <!-- Replaced 🤖 robot emoji -->
+                            <ui:VisualElement class="item-icon" style="width: 60px; height: 60px; background-image: url('project://database/Assets/ICON_img/robot.png'); -unity-background-scale-mode: scale-to-fit; margin-bottom: 5px;"/>
+                            <ui:Label text="Auto-Fetch" class="item-name" style="font-size: 20px;"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="item-count-container" style="width: 20%; align-items: center; justify-content: center;">
+                            <ui:Label name="TxtCountAutoFetch" text="x1" class="item-count" style="font-size: 24px;"/>
+                        </ui:VisualElement>
+                    </ui:Button>
+
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="InfoAlertModal" class="alert-overlay alert-hidden">
+            <ui:VisualElement class="alert-box">
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center; margin-bottom: 15px;">
+                    <ui:VisualElement name="ImgInfoIcon" class="alert-icon"/>
+                    <ui:Label name="TxtAlertTitle" text="Item Name" class="alert-title" style="margin-bottom: 0;"/>
+                </ui:VisualElement>
+                <ui:Label name="TxtAlertDesc" text="Description goes here." class="alert-desc"/>
+                <ui:Label text="(Tap anywhere to close)" class="alert-hint"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+<!-- CONFIRMATION POPUP -->
+        <ui:VisualElement name="ConfirmAlertModal" class="alert-overlay alert-hidden">
+            <ui:VisualElement class="alert-box">
+                <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center; margin-bottom: 15px;">
+                    <ui:VisualElement name="ImgConfirmIcon" class="alert-icon"/>
+                    <ui:Label name="TxtConfirmTitle" text="Use Item?" class="alert-title" style="margin-bottom: 0;"/>
+                </ui:VisualElement>
+                <ui:Label name="TxtConfirmDesc" text="Are you sure you want to use this item?" class="alert-desc"/>
+                
+                <!-- Action Buttons -->
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between; width: 100%; margin-top: 20px;">
+                    <ui:Button name="BtnConfirmNo" text="Nope" class="btn-cancel"/>
+                    <ui:Button name="BtnConfirmYes" text="Let's Go!" class="btn-confirm"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

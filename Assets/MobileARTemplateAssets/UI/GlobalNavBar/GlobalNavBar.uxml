@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:uie="UnityEditor.UIElements"
+    xsi="http://www.w3.org/2001/XMLSchema-instance"
+    engine="UnityEngine.UIElements"
+    editor="UnityEditor.UIElements"
+    noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
+    editor-extension-mode="False">
+
+    <ui:Style src="GlobalNavBar.uss" />
+
+    <ui:VisualElement name="GlobalNavContainer" class="bottom-menu-container">
+        
+        <!-- Replaced 🏠 Home emoji -->
+        <ui:Button name="BtnNavHome" class="nav-item nav-item-active" style="align-items: center; justify-content: center;">
+            <ui:VisualElement class="nav-icon" style="width: 28px; height: 28px; background-image: url('project://database/Assets/ICON_img/home.png'); -unity-background-scale-mode: scale-to-fit;" />
+            <ui:Label text="Home" class="nav-text" />
+        </ui:Button>
+
+        <!-- Replaced 🐾 Pet emoji -->
+        <ui:Button name="BtnNavPet" class="nav-item" style="align-items: center; justify-content: center;">
+            <ui:VisualElement class="nav-icon" style="width: 28px; height: 28px; background-image: url('project://database/Assets/ICON_img/pawprint.png'); -unity-background-scale-mode: scale-to-fit;" />
+            <ui:Label text="Pet" class="nav-text" />
+        </ui:Button>
+
+        <!-- Replaced 📋 Missions emoji -->
+        <ui:Button name="BtnNavMissions" class="nav-item" style="align-items: center; justify-content: center;">
+            <ui:VisualElement class="nav-icon" style="width: 28px; height: 28px; background-image: url('project://database/Assets/ICON_img/target.png'); -unity-background-scale-mode: scale-to-fit;" />
+            <ui:Label text="Missions" class="nav-text" />
+        </ui:Button>
+
+        <!-- Replaced 👤 Profile emoji -->
+        <ui:Button name="BtnNavProfile" class="nav-item" style="align-items: center; justify-content: center;">
+            <ui:VisualElement class="nav-icon" style="width: 28px; height: 28px; background-image: url('project://database/Assets/ICON_img/user.png'); -unity-background-scale-mode: scale-to-fit;" />
+            <ui:Label text="Profile" class="nav-text" />
+        </ui:Button>
+        
+    </ui:VisualElement>
+</ui:UXML>

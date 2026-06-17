@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:uie="UnityEditor.UIElements"
+    xsi="http://www.w3.org/2001/XMLSchema-instance"
+    engine="UnityEngine.UIElements"
+    editor="UnityEditor.UIElements"
+    noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
+    editor-extension-mode="False">
+
+    <ui:Style src="ProfileScreen.uss" />
+
+    <ui:VisualElement name="ProfileScreenRoot" class="screen-container screen-hidden-right">
+        
+        <ui:VisualElement class="header-container">
+            <ui:Button name="BtnBack" class="icon-button" text="←" />
+            <ui:Label text="Create Profile" class="title-text" />
+            <ui:Label text="Ready to explore the world?" class="subtitle-text" />
+        </ui:VisualElement>
+
+        <ui:ScrollView class="form-scroll-container" shows-vertical-scroll-indicator="false">
+            
+            <ui:VisualElement class="avatar-container">
+                <ui:VisualElement name="AvatarCircle" class="avatar-circle">
+                    <!-- Replaced 🧑 user emoji -->
+                    <ui:VisualElement name="AvatarPlaceholder" class="avatar-placeholder" style="background-image: url('project://database/Assets/ICON_img/user.png'); -unity-background-scale-mode: scale-to-fit; width: 100%; height: 100%;" />
+                </ui:VisualElement>
+                <!-- Replaced ✎ pencil emoji -->
+                <ui:Button name="BtnEditAvatar" class="edit-badge" style="justify-content: center; align-items: center; padding: 2px;">
+                    <ui:VisualElement style="background-image: url('project://database/Assets/ICON_img/pencil.png'); -unity-background-scale-mode: scale-to-fit; width: 100%; height: 100%;" />
+                </ui:Button>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="input-container">
+                <ui:Label text="CODENAME" class="input-label" />
+                <ui:TextField name="InputUsername" class="custom-textfield" placeholder-text="Choose a username" />
+
+                <ui:Label text="EMAIL" class="input-label" />
+                <ui:TextField name="InputEmail" class="custom-textfield" placeholder-text="Enter your email" />
+
+                <ui:Label text="PASSWORD" class="input-label" />
+                <ui:TextField name="InputPassword" class="custom-textfield" password="true" placeholder-text="Create a password" />
+
+                <ui:Label text="CONFIRM PASSWORD" class="input-label" />
+                <ui:TextField name="InputConfirmPassword" class="custom-textfield" password="true" placeholder-text="Re-enter password" />
+            </ui:VisualElement>
+	    
+            <ui:VisualElement class="info-container">
+                <ui:Label text="YOUR JOURNEY" class="section-label" />
+            
+                <ui:VisualElement class="journey-list">
+                    <ui:VisualElement class="journey-card">
+                        <!-- Replaced 🚶 walking emoji -->
+                        <ui:VisualElement class="journey-icon-box bg-green-light">
+                            <ui:VisualElement class="journey-icon" style="background-image: url('project://database/Assets/ICON_img/walking.png'); -unity-background-scale-mode: scale-to-fit; width: 100%; height: 100%;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="journey-text-box">
+                            <ui:Label text="Step Tracking" class="journey-title" />
+                            <ui:Label text="Walk to earn energy" class="journey-desc" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+
+                    <ui:VisualElement class="journey-card">
+                        <!-- Replaced 🗺️ treasure-map emoji -->
+                        <ui:VisualElement class="journey-icon-box bg-orange-light">
+                            <ui:VisualElement class="journey-icon" style="background-image: url('project://database/Assets/ICON_img/treasure-map.png'); -unity-background-scale-mode: scale-to-fit; width: 100%; height: 100%;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="journey-text-box">
+                            <ui:Label text="Exploration" class="journey-title" />
+                            <ui:Label text="Discover hidden items" class="journey-desc" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+
+                    <ui:VisualElement class="journey-card">
+                        <!-- Replaced 🐾 paws emoji -->
+                        <ui:VisualElement class="journey-icon-box bg-yellow-light">
+                            <ui:VisualElement class="journey-icon" style="background-image: url('project://database/Assets/ICON_img/paws.png'); -unity-background-scale-mode: scale-to-fit; width: 100%; height: 100%;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="journey-text-box">
+                            <ui:Label text="Companion" class="journey-title" />
+                            <ui:Label text="Grow your virtual pet" class="journey-desc" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:Label text="CHOOSE COMPANION" class="section-label" style="margin-top: 40px;" />
+                
+                <ui:VisualElement class="pet-carousel-container">
+                    <!-- Replaced ◀ left-arrow emoji -->
+                    <ui:Button name="BtnPrevPet" class="carousel-arrow" style="justify-content: center; align-items: center; padding: 4px;">
+                        <ui:VisualElement class="arrow-text" style="background-image: url('project://database/Assets/ICON_img/left-arrow.png'); -unity-background-scale-mode: scale-to-fit; width: 100%; height: 100%;" />
+                    </ui:Button>
+                    
+                    <ui:VisualElement class="carousel-center">
+                        <ui:VisualElement name="SignupPetRenderSurface" class="signup-render-surface" />
+                        <ui:Label name="TxtSelectedPetName" text="Mossy" class="selected-pet-name" />
+                        <ui:Label text="↔ Swipe to rotate" class="swipe-hint" />
+                    </ui:VisualElement>
+
+                    <!-- Replaced ▶ right-arrow emoji -->
+                    <ui:Button name="BtnNextPet" class="carousel-arrow" style="justify-content: center; align-items: center; padding: 4px;">
+                        <ui:VisualElement class="arrow-text" style="background-image: url('project://database/Assets/ICON_img/right-arrow.png'); -unity-background-scale-mode: scale-to-fit; width: 100%; height: 100%;" />
+                    </ui:Button>
+                </ui:VisualElement>
+
+                <ui:Label name="FeedbackMessage" class="feedback-message" style="display: none;" />
+                
+                <ui:Button name="BtnStartAdventure" class="start-button">
+                    <ui:Label text="Start Adventure →" class="start-text" />
+                </ui:Button>
+
+            </ui:VisualElement> 
+        </ui:ScrollView> 
+    </ui:VisualElement> 
+</ui:UXML>

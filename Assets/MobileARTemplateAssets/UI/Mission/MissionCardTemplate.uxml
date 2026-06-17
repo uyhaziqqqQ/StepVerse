@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="CardRoot" class="mission-card">
+        <ui:VisualElement class="mission-row">
+            <ui:VisualElement name="IconBox" class="mission-icon-box">
+                <!-- Changed TxtIcon to a VisualElement named MissionIcon! -->
+                <ui:VisualElement name="MissionIcon" class="mission-icon" style="width: 100%; height: 100%; background-image: url('project://database/Assets/ICON_img/target.png'); -unity-background-scale-mode: scale-to-fit;" />
+            </ui:VisualElement>
+            <ui:VisualElement class="mission-details">
+                <ui:Label name="TxtTitle" text="Mission Title" class="mission-title" />
+                <ui:Label name="TxtDesc" text="Mission Description" class="mission-desc" style="white-space: normal;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        
+        <ui:VisualElement name="ProgressContainer" class="mission-progress-row">
+            <ui:Label name="TxtCurrent" text="0" class="progress-number" />
+            <ui:VisualElement class="card-progress-track">
+                <ui:VisualElement name="FillBar" class="card-progress-fill" style="width: 0%;" />
+            </ui:VisualElement>
+            <ui:Label name="TxtTarget" text="5000" class="progress-number" />
+        </ui:VisualElement>
+        
+        <!-- Replaced 🎁 giftbox emoji -->
+        <ui:Button name="BtnClaim" class="claim-button bg-green" style="display: none; flex-direction: row; justify-content: center; align-items: center;">
+            <ui:Label text="Claim Reward" class="claim-text" />
+            <ui:VisualElement style="width: 45px; height: 45px; background-image: url('project://database/Assets/ICON_img/giftbox.png'); -unity-background-scale-mode: scale-to-fit; margin-left: 8px;"/>
+        </ui:Button>
+    </ui:VisualElement>
+</ui:UXML>

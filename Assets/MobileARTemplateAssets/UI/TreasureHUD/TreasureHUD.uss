@@ -1,0 +1,22 @@
+/* Darkens the map behind the popup */
+.overlay { position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); align-items: center; justify-content: center; }
+.hidden { display: none; }
+
+/* The White Card Container */
+.hud-card { width: 85%; background-color: #FFFFFF; border-radius: 40px; padding: 40px 30px; align-items: center; justify-content: center; overflow: hidden; }
+
+/* When they hit 50m, this creates a subtle red glowing border INSIDE the card */
+.alert-border { position: absolute; width: 100%; height: 100%; border-width: 8px; border-color: rgba(255, 69, 0, 0.8); border-radius: 40px; picking-mode: ignore; }
+
+/* "Treasure Nearby!" Title */
+.hud-title { font-size: 50px; -unity-font-style: bold; color: #2D1B0A; margin-bottom: 15px; -unity-text-align: middle-center; white-space: normal; }
+
+/* Dynamic Distance Text (Smaller, Grey) */
+.radar-text { font-size: 32px; -unity-font-style: bold; color: #7A6C62; margin-bottom: 30px; -unity-text-align: middle-center; white-space: normal; }
+
+/* AR Button */
+.ar-scan-btn { width: 95%; height: 90px; background-color: #FF9800; border-radius: 45px; justify-content: center; align-items: center; border-width: 0; transition-duration: 0.1s; }
+.ar-scan-btn:active { scale: 0.95; background-color: #E68900; }
+.ar-btn-text { font-size: 35px; -unity-font-style: bold; color: #FFFFFF; }
+
+.icon-camera { background-image: url('project://database/Assets/ICON_img/camera.png'); -unity-background-scale-mode: scale-to-fit; width: 45px; height: 45px; margin-right: 12px; }

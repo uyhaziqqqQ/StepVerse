@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:uie="UnityEditor.UIElements"
+    xsi="http://www.w3.org/2001/XMLSchema-instance"
+    engine="UnityEngine.UIElements"
+    editor="UnityEditor.UIElements"
+    noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
+    editor-extension-mode="False">
+
+    <ui:Style src="StatsScreen.uss" />
+
+    <ui:VisualElement name="StatsScreenRoot" class="screen-container screen-hidden-right">
+        
+        <ui:VisualElement class="header-container">
+            <ui:Button name="BtnBack" class="icon-button" text="←" />
+            <ui:Label text="Your Journey" class="title-text" />
+            <ui:VisualElement style="width: 60px;" /> </ui:VisualElement>
+
+        <ui:VisualElement class="summary-card">
+            <ui:Label text="LIFETIME STATS" class="section-label" />
+            <ui:VisualElement class="stats-row">
+                <ui:VisualElement class="stat-box">
+                    <ui:Label text="👣" class="stat-icon" />
+                    <ui:Label name="TxtTotalSteps" text="124,500" class="stat-value" />
+                    <ui:Label text="Total Steps" class="stat-title" />
+                </ui:VisualElement>
+                
+                <ui:VisualElement class="divider" />
+
+                <ui:VisualElement class="stat-box">
+                    <ui:Label text="🗺️" class="stat-icon" />
+                    <ui:Label name="TxtTotalDistance" text="94.2 km" class="stat-value" />
+                    <ui:Label text="Total Distance" class="stat-title" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:Label text="RECENT ACTIVITY" class="section-label" style="margin-left: 20px;" />
+        
+        <ui:ScrollView class="history-scroll">
+            <ui:VisualElement class="history-item">
+                <ui:VisualElement class="history-date-box">
+                    <ui:Label text="TODAY" class="history-day" />
+                </ui:VisualElement>
+                <ui:VisualElement class="history-data">
+                    <ui:Label text="5,432 Steps" class="history-steps" />
+                    <ui:Label text="4.1 km" class="history-distance" />
+                </ui:VisualElement>
+                <ui:Label text="🔥" class="history-status" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="history-item">
+                <ui:VisualElement class="history-date-box">
+                    <ui:Label text="YESTERDAY" class="history-day" />
+                </ui:VisualElement>
+                <ui:VisualElement class="history-data">
+                    <ui:Label text="10,240 Steps" class="history-steps" />
+                    <ui:Label text="7.8 km" class="history-distance" />
+                </ui:VisualElement>
+                <ui:Label text="⭐" class="history-status" />
+            </ui:VisualElement>
+            
+            <ui:VisualElement class="history-item">
+                <ui:VisualElement class="history-date-box">
+                    <ui:Label text="MON" class="history-day" />
+                </ui:VisualElement>
+                <ui:VisualElement class="history-data">
+                    <ui:Label text="8,100 Steps" class="history-steps" />
+                    <ui:Label text="6.1 km" class="history-distance" />
+                </ui:VisualElement>
+                <ui:Label text="✔️" class="history-status" />
+            </ui:VisualElement>
+        </ui:ScrollView>
+
+    </ui:VisualElement>
+</ui:UXML>

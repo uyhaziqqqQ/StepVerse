@@ -1,0 +1,112 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/MobileARTemplateAssets/UI/UserProfileScreen/UserProfileScreen.uss?fileID=7433441132597879392&amp;guid=6b72ad8a8688fe741954aac501f4127b&amp;type=3#UserProfileScreen"/>
+    <ui:VisualElement name="UserProfileRoot" class="screen-container screen-hidden" style="display: flex; height: 100%; width: 100%; opacity: 1;">
+        <ui:ScrollView shows-vertical-scroll-indicator="false" class="profile-scrollview">
+            
+            <ui:VisualElement class="profile-header">
+                <ui:VisualElement class="avatar-wrapper">
+                    <ui:VisualElement class="avatar-circle">
+                        <ui:VisualElement class="avatar-icon icon-head"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="edit-badge">
+                        <ui:VisualElement class="edit-icon icon-pencil"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Label name="TxtUserName" text="Explorer Jane" class="user-name"/>
+                <ui:Label name="TxtProfileSubtitle" text="Level 12 • Joined Aug 2023" class="user-subtitle"/>
+            </ui:VisualElement>
+            
+            <ui:VisualElement class="stats-row">
+                <ui:VisualElement class="stat-card">
+                    <ui:VisualElement class="stat-icon icon-green icon-footsteps"/>
+                    <ui:Label text="124k" name="TxtTotalSteps" class="stat-value"/>
+                    <ui:Label text="Total Steps" class="stat-label"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="stat-card">
+                    <ui:VisualElement class="stat-icon icon-yellow icon-footprint"/>
+                    <ui:Label text="Sprout" name="TxtCurrentPet" class="stat-value"/>
+                    <ui:Label text="Current Pet" name="TxtCurrentPetForm" class="stat-label"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="stat-card">
+                    <ui:VisualElement class="stat-icon icon-red icon-fire2"/>
+                    <ui:Label text="14" name="TxtDayStreak" class="stat-value"/>
+                    <ui:Label text="Day Streak" class="stat-label"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            
+            <ui:Label text="Fitness Goals" class="section-title"/>
+            <ui:VisualElement class="card-container">
+                <ui:VisualElement class="goal-header">
+                    <ui:VisualElement class="goal-icon icon-flag"/>
+                    <ui:VisualElement>
+                        <ui:Label text="Daily Step Goal" class="goal-title"/>
+                        <ui:Label text="Keep pushing!" class="goal-subtitle"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1;"/>
+                    <ui:Label name="TxtGoalValue" text="8,000" class="goal-target"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="slider-wrapper">
+                    <ui:Label text="5k" class="slider-label"/>
+                    <ui:Slider name="GoalSlider" low-value="5000" high-value="20000" value="8000" class="custom-slider"/>
+                    <ui:Label text="20k" class="slider-label"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            
+            <ui:Label text="Game Settings" class="section-title"/>
+            <ui:VisualElement class="card-container settings-container">
+                
+                <ui:VisualElement class="setting-row">
+                    <ui:VisualElement class="setting-icon-box icon-green">
+                        <ui:VisualElement class="icon-volume"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="setting-text-box">
+                        <ui:Label text="Sound Effects" class="setting-title"/>
+                        <ui:Label text="In-game audio" class="setting-desc"/>
+                    </ui:VisualElement>
+                    <ui:Toggle name="TglSound" value="true" class="custom-toggle"/>
+                </ui:VisualElement>
+                
+                <ui:VisualElement class="setting-row">
+                    <ui:VisualElement class="setting-icon-box icon-yellow">
+                        <ui:VisualElement class="icon-music"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="setting-text-box">
+                        <ui:Label text="Music" class="setting-title"/>
+                        <ui:Label text="Background ambience" class="setting-desc"/>
+                    </ui:VisualElement>
+                    <ui:Toggle name="TglMusic" value="true" class="custom-toggle"/>
+                </ui:VisualElement>
+                
+                <ui:VisualElement class="setting-row">
+                    <ui:VisualElement class="setting-icon-box icon-red">
+                        <ui:VisualElement class="icon-vibration"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="setting-text-box">
+                        <ui:Label text="Haptic Feedback" class="setting-title"/>
+                        <ui:Label text="Vibrate on interactions" class="setting-desc"/>
+                    </ui:VisualElement>
+                    <ui:Toggle name="TglHaptics" value="false" class="custom-toggle"/>
+                </ui:VisualElement>
+                
+            </ui:VisualElement>
+            
+            <ui:Label text="Privacy &amp; Data" class="section-title"/>
+            <ui:VisualElement class="card-container">
+                <ui:Button class="menu-button">
+                    <ui:VisualElement class="setting-icon-box icon-blue">
+                        <ui:VisualElement class="icon-location"/>
+                    </ui:VisualElement>
+                    <ui:Label text="Location Permissions" class="menu-button-text"/>
+                    <ui:VisualElement style="flex-grow: 1;"/>
+                    <ui:Label text="&gt;" class="menu-arrow"/>
+                </ui:Button>
+            </ui:VisualElement>
+            
+            <ui:Button name="BtnSignOut" class="signout-button" style="flex-direction: row; justify-content: center; align-items: center;">
+                <ui:VisualElement class="icon-logout"/>
+                <ui:Label text="Sign Out" class="signout-text"/>
+            </ui:Button>
+            
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

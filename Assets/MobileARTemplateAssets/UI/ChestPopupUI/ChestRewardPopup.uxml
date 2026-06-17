@@ -1,0 +1,26 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="ChestRewardPopup.uss"/>
+    
+    <ui:VisualElement name="RewardOverlay" class="overlay hidden">
+        <ui:VisualElement class="reward-card">
+            
+            <!-- Replaced emojis with shine.png -->
+            <ui:VisualElement style="flex-direction: row; justify-content: center; align-items: center; margin-bottom: 10px;">
+                <ui:VisualElement style="width: 40px; height: 40px; background-image: url('project://database/Assets/ICON_img/shine.png'); -unity-background-scale-mode: scale-to-fit; margin-right: 15px;"/>
+                <ui:Label text="Treasure Found!" class="reward-title"/>
+                <ui:VisualElement style="width: 40px; height: 40px; background-image: url('project://database/Assets/ICON_img/shine.png'); -unity-background-scale-mode: scale-to-fit; margin-left: 15px;"/>
+            </ui:VisualElement>
+            
+            <ui:VisualElement class="reward-content">
+                <ui:Label name="TxtTreats" text="+50 Treats" class="treat-text"/>
+                <ui:Label text="Power-Ups:" class="powerup-subtitle"/>
+                <ui:Label name="TxtPowerUps" text="- 1x Level Boost&#10;- 2x Double Steps" class="powerup-list"/>
+            </ui:VisualElement>
+
+            <ui:Button name="BtnClaim" class="claim-btn">
+                <ui:Label text="Claim Loot" class="claim-text"/>
+            </ui:Button>
+            
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

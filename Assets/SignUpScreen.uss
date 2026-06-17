@@ -1,0 +1,355 @@
+.root-container {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(245, 245, 238);
+}
+
+.signup-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(245, 245, 238);
+}
+
+.scroll-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+}
+
+.content-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 56px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 48px;
+}
+
+.btn-back {
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: rgb(255, 255, 255);
+    border-width: 0;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    padding: 0;
+}
+
+.btn-back:hover {
+    background-color: rgb(236, 236, 236);
+}
+
+.btn-back-label {
+    font-size: 22px;
+    color: rgb(59, 31, 14);
+    -unity-text-align: middle-center;
+}
+
+.header-group {
+    align-items: flex-start;
+    margin-bottom: 28px;
+}
+
+.page-title {
+    font-size: 34px;
+    color: rgb(59, 31, 14);
+    -unity-font-style: bold;
+    margin-bottom: 4px;
+}
+
+.page-subtitle {
+    font-size: 15px;
+    color: rgb(154, 136, 120);
+    -unity-font-style: normal;
+}
+
+.avatar-wrapper {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.avatar-ring {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border-width: 3px;
+    border-color: rgb(245, 200, 66);
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(238, 232, 216);
+}
+
+.avatar-image {
+    width: 88px;
+    height: 88px;
+    border-radius: 44px;
+    background-color: rgb(212, 200, 176);
+}
+
+.btn-avatar-edit {
+    position: absolute;
+    bottom: 0;
+    right: 110px;
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    background-color: rgb(244, 162, 97);
+    border-width: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-left: 64px;
+    margin-top: -28px;
+}
+
+.btn-avatar-edit-label {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+}
+
+.form-group {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 24px;
+}
+
+.field-label {
+    font-size: 11px;
+    color: rgb(154, 136, 120);
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    margin-top: 16px;
+}
+
+.input-wrap {
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    border-width: 0;
+    height: 54px;
+    padding-left: 18px;
+    padding-right: 12px;
+    margin-bottom: 4px;
+}
+
+.input-field {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    font-size: 16px;
+    color: rgb(59, 31, 14);
+    -unity-font-style: normal;
+    height: 100%;
+    padding: 0;
+}
+
+.input-field:placeholder {
+    color: rgb(192, 176, 160);
+}
+
+.input-suffix {
+    font-size: 18px;
+    color: rgb(192, 176, 160);
+    -unity-text-align: middle-center;
+    width: 28px;
+}
+
+.btn-eye {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.eye-icon {
+    font-size: 18px;
+    color: rgb(192, 176, 160);
+    -unity-text-align: middle-center;
+}
+
+.journey-label {
+    margin-top: 8px;
+}
+
+.journey-cards {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 24px;
+}
+
+.journey-card {
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 10px;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 14px;
+}
+
+.card-icon-green {
+    background-color: rgb(212, 240, 220);
+}
+
+.card-icon-orange {
+    background-color: rgb(252, 228, 204);
+}
+
+.card-icon-yellow {
+    background-color: rgb(253, 243, 204);
+}
+
+.card-text {
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-size: 15px;
+    color: rgb(59, 31, 14);
+    -unity-font-style: bold;
+    margin-bottom: 2px;
+}
+
+.card-desc {
+    font-size: 12px;
+    color: rgb(154, 136, 120);
+}
+
+.error-label {
+    font-size: 13px;
+    color: rgb(217, 83, 79);
+    -unity-text-align: middle-center;
+    margin-bottom: 10px;
+    white-space: normal;
+}
+
+.btn {
+    height: 58px;
+    border-radius: 50px;
+    border-width: 0;
+    margin-bottom: 14px;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+    cursor: link;
+}
+
+.btn-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.btn-submit .btn-inner {
+    background-color: rgb(109, 200, 138);
+}
+
+.btn-submit:hover .btn-inner {
+    background-color: rgb(90, 184, 120);
+}
+
+.btn-submit:active .btn-inner {
+    background-color: rgb(75, 169, 106);
+}
+
+.btn-label {
+    font-size: 18px;
+    color: rgb(59, 31, 14);
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.login-redirect {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.redirect-text {
+    font-size: 14px;
+    color: rgb(154, 136, 120);
+}
+
+.btn-link {
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    padding: 0;
+    cursor: link;
+}
+
+.btn-link-label {
+    font-size: 14px;
+    color: rgb(109, 200, 138);
+    -unity-font-style: bold;
+}
+
+.btn-link:hover .btn-link-label {
+    color: rgb(75, 169, 106);
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 40px;
+    padding-right: 40px;
+    align-items: center;
+}
+
+.loading-text {
+    font-size: 16px;
+    color: rgb(59, 31, 14);
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.hidden {
+    display: none;
+}
+
+

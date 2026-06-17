@@ -1,0 +1,77 @@
+/* --- Global --- */
+.screen-container { position: absolute; width: 100%; height: 100%; background-color: #FDF7EC; display: flex; }
+.screen-hidden { display: none; }
+.pet-scrollview { flex-grow: 1; padding: 60px 40px; padding-bottom: 180px; }
+
+/* --- Header & Avatar --- */
+.header-row { flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+.page-title { font-size: 50px; -unity-font-style: bold; color: #2D1B0A; }
+
+.avatar-section { align-items: center; margin-bottom: 40px; }
+.avatar-circle { width: 350px; height: 350px; border-radius: 175px; background-color: #E2D5C4; align-items: center; justify-content: center; border-width: 8px; border-color: #FFFFFF; margin-bottom: 20px; }
+.pet-emoji { font-size: 180px; }
+.level-badge { position: absolute; top: 10px; right: 0; background-color: #FCDF76; padding: 8px 20px; border-radius: 20px; border-width: 4px; border-color: #FFFFFF; }
+.level-text { font-size: 22px; -unity-font-style: bold; color: #2D1B0A; }
+
+.pet-name { font-size: 60px; -unity-font-style: bold; color: #2D1B0A; }
+.pet-stage { font-size: 30px; color: #A08C7F; margin-top: 5px; }
+
+/* --- 3D Viewer --- */
+.pet-viewer-container { width: 100%; height: 600px; background-color: #EAF4D3; border-radius: 60px; margin-bottom: 30px; overflow: hidden; align-items: center; justify-content: center; }
+.pet-render-surface { width: 100%; height: 100%; justify-content: flex-end; align-items: center; padding-bottom: 20px; }
+.swipe-hint { font-size: 24px; color: rgba(45, 27, 10, 0.4); -unity-font-style: bold; }
+
+/* --- Treat Wallet --- */
+.treat-wallet { flex-direction: row; align-items: center; background-color: #FFF3CD; padding: 10px 20px; border-radius: 25px; border-width: 2px; border-color: #FFEBAA; }
+.treat-icon { font-size: 30px; margin-right: 10px; }
+.treat-amount { font-size: 26px; -unity-font-style: bold; color: #856404; }
+
+/* --- Action Buttons --- */
+.action-row { flex-direction: row; justify-content: space-between; margin-bottom: 50px; }
+.action-btn { flex-grow: 1; height: 90px; border-radius: 45px; margin: 0 10px; align-items: center; justify-content: center; border-width: 4px; transition-duration: 0.1s; }
+.action-btn:active { scale: 0.95; }
+.btn-orange { background-color: #FF9800; border-color: #FF9800; }
+.btn-outline { background-color: #FFFFFF; border-color: #FF9800; }
+.btn-text { font-size: 32px; -unity-font-style: bold; }
+.text-white { color: #FFFFFF; }
+.text-orange { color: #FF9800; }
+
+/* --- Progress Section --- */
+.progress-section { background-color: #FFFFFF; border-radius: 40px; padding: 40px; margin-bottom: 40px; }
+.section-title { font-size: 34px; -unity-font-style: bold; color: #2D1B0A; margin-bottom: 10px; }
+.section-subtitle { font-size: 24px; color: #A08C7F; margin-bottom: 25px; white-space: normal; }
+
+.progress-bar-container { height: 24px; margin-bottom: 15px; }
+.progress-track { flex-grow: 1; height: 100%; background-color: #FDF7EC; border-radius: 12px; }
+.progress-fill {
+    height: 100%;
+    background-color: #FF9800;
+    border-radius: 12px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+.progress-numbers { font-size: 26px; -unity-font-style: bold; align-self: flex-end; }
+
+/* --- Evolution Chain --- */
+.chain-section { background-color: #FFFFFF; border-radius: 40px; padding: 40px; margin-bottom: 40px; }
+.chain-container { margin-top: 30px; align-items: center; justify-content: center; }
+
+/* The horizontal line behind the circles */
+.connecting-line { position: absolute; top: 75px; width: 80%; height: 6px; background-color: #E2D5C4; }
+
+.nodes-row { flex-direction: row; justify-content: space-between; width: 100%; }
+.node-wrapper { align-items: center; width: 30%; }
+
+.chain-circle { width: 150px; height: 150px; border-radius: 75px; align-items: center; justify-content: center; background-color: #FFFFFF; }
+.active-circle { border-width: 6px; border-color: #8FD1C5; } /* Green border for active */
+.locked-circle { border-width: 6px; border-color: #E2D5C4; border-style: dashed; } /* Dashed mystery border */
+
+.node-icon { font-size: 60px; }
+.node-label { font-size: 24px; -unity-font-style: bold; margin-top: 15px; }
+.text-grey { color: #A08C7F; }
+
+/* Custom Icons */
+.icon-treat { background-image: url('project://database/Assets/ICON_img/fruits.png'); }
+.icon-play { background-image: url('project://database/Assets/ICON_img/play.png'); }
+

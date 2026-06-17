@@ -1,0 +1,25 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/MobileARTemplateAssets/UI/SplashScreen/SplashScreen.uss?fileID=7433441132597879392&amp;guid=70969ebe430797e42b22408d3ca91018&amp;type=3#SplashScreen"/>
+    <ui:VisualElement class="screen-container">
+        <ui:VisualElement class="spacer-top"/>
+        <ui:VisualElement class="logo-container">
+            <ui:VisualElement style="width: 406px; height: 367px; background-image: url(&quot;project://database/Assets/ICON_img/logo.png?fileID=2800000&amp;guid=941222b0e3efd824697fdd07a3aa3346&amp;type=3#logo&quot;); -unity-background-scale-mode: scale-to-fit; margin-bottom: 15px; align-self: center;"/>
+            <ui:Label text="StepVerse" class="title-text"/>
+            <ui:Label text="Walk. Explore. Grow." class="subtitle-text"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="button-container">
+            <ui:Button name="BtnStartJourney" class="primary-button btn-green" style="flex-direction: row; justify-content: center; align-items: center;">
+                <ui:VisualElement style="width: 91px; height: 73px; background-image: url(&quot;project://database/Assets/ICON_img/play.png?fileID=2800000&amp;guid=a2e0925a1c906984f83a30591f7f6ca1&amp;type=3#play&quot;); -unity-background-scale-mode: scale-to-fit; margin-right: 8px;"/>
+                <ui:Label text="Start Journey" class="btn-text"/>
+            </ui:Button>
+            <ui:Button name="BtnSignUp" class="primary-button btn-orange" style="flex-direction: row; justify-content: center; align-items: center;">
+                <ui:VisualElement style="width: 82px; height: 89px; background-image: url(&quot;project://database/Assets/ICON_img/user.png?fileID=2800000&amp;guid=070ca02ea35e9c84798b2aa844723602&amp;type=3#user&quot;); -unity-background-scale-mode: scale-to-fit; margin-right: 8px;"/>
+                <ui:Label text="Sign Up" class="btn-text" style="height: 76px; width: 194px;"/>
+            </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement class="footer-container" style="flex-direction: row; justify-content: center; align-items: center;">
+            <ui:VisualElement style="width: 44px; height: 37px; background-image: url(&quot;project://database/Assets/ICON_img/info.png?fileID=2800000&amp;guid=6835ed2b2507fcb40b337fef6f1c007c&amp;type=3#info&quot;); -unity-background-scale-mode: scale-to-fit; margin-right: 6px;"/>
+            <ui:Label text="Version 1.0.0" class="footer-text" style="margin-top: 0; margin-bottom: 0;"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

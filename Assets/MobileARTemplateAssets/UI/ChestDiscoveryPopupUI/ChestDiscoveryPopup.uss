@@ -1,0 +1,24 @@
+.overlay { 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    align-items: center; 
+    justify-content: center; 
+    picking-mode: position; /* <-- THIS BLOCKS CLICKS! */
+}.hidden { display: none; }
+
+.discovery-card { width: 85%; background-color: #FFFFFF; border-radius: 40px; padding: 40px; align-items: center; }
+.discovery-title { font-size: 50px; -unity-font-style: bold; color: #2D1B0A; margin-bottom: 20px; }
+.discovery-desc { font-size: 30px; color: #A08C7F; margin-bottom: 40px; white-space: normal; -unity-text-align: middle-center; }
+
+.button-row { flex-direction: row; width: 100%; justify-content: space-between; }
+.btn { flex-grow: 1; height: 90px; border-radius: 45px; margin: 0 10px; align-items: center; justify-content: center; border-width: 4px; transition-duration: 0.1s; }
+.btn:active { scale: 0.95; }
+
+.btn-orange { background-color: #FF9800; border-color: #FF9800; }
+.btn-outline { background-color: #FFFFFF; border-color: #E2D5C4; }
+
+.btn-text { font-size: 32px; -unity-font-style: bold; }
+.text-white { color: #FFFFFF; }
+.text-grey { color: #A08C7F; }

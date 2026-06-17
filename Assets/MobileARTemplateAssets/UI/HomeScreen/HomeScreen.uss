@@ -1,0 +1,210 @@
+/* --- Global Layout --- */
+.screen-container {
+    flex-grow: 1;
+    background-color: #FDF7EC;
+    width: 100%;
+    height: 100%;
+    padding: 60px 40px;
+    position: absolute;
+    transition-property: translate, opacity;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out-cubic;
+    translate: 0 0;
+    opacity: 1;
+}
+
+.screen-hidden-right { translate: 100% 0; opacity: 0; }
+.screen-hidden-left { translate: -100% 0; opacity: 0; } /* For pushing it back when opening Profile */
+
+/* --- Header --- */
+.header-container { flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.user-greeting-box { flex-direction: row; align-items: center; }
+.mini-avatar { width: 80px; height: 80px; border-radius: 40px; background-color: #FCDF76; align-items: center; justify-content: center; margin-right: 20px; }
+.mini-avatar-icon { font-size: 40px; }
+.greeting-text { font-size: 42px; -unity-font-style: bold; color: #2D1B0A; }
+.icon-button { font-size: 60px; background-color: transparent; border-width: 0; color: #4A2B12; }
+
+/* --- 3D Viewer --- */
+.pet-viewer-container { width: 100%; height: 600px; background-color: #EAF4D3; border-radius: 60px; margin-bottom: 30px; overflow: hidden; align-items: center; justify-content: center; }
+.pet-render-surface { width: 100%; height: 100%; justify-content: flex-end; align-items: center; padding-bottom: 20px; }
+.swipe-hint { font-size: 24px; color: rgba(45, 27, 10, 0.4); -unity-font-style: bold; }
+
+/* --- Step Stats --- */
+.steps-container { width: 100%; align-items: center; background-color: transparent; border-width: 0; margin-bottom: 30px; transition-property: scale; transition-duration: 0.1s; }
+.steps-container:active { scale: 0.95; }
+.steps-row { flex-direction: row; align-items: flex-start; }
+.step-number { font-size: 110px; -unity-font-style: bold; color: #2D1B0A; }
+.step-plus { font-size: 50px; -unity-font-style: bold; color: #F39C12; margin-top: 20px; }
+.distance-badge { flex-direction: row; background-color: #FFFFFF; border-radius: 30px; padding: 10px 30px; align-items: center; margin-top: -10px; border-width: 2px; border-color: #E2D5C4; }
+.distance-icon { font-size: 30px; margin-right: 10px; }
+.distance-text { font-size: 28px; color: #5C4033; }
+
+/* --- Goals & Progress Bars --- */
+.goal-container { width: 100%; background-color: #FFFFFF; border-radius: 40px; padding: 40px; margin-bottom: 30px; }
+.goal-header { flex-direction: row; justify-content: space-between; margin-bottom: 20px; }
+.goal-title { font-size: 32px; -unity-font-style: bold; color: #2D1B0A; }
+.goal-target { font-size: 32px; color: #A08C7F; }
+.progress-track { width: 100%; height: 35px; border-radius: 17px; background-color: #EAF4D3; overflow: hidden; }
+.progress-fill { height: 100%; background-color: #8FD1C5; transition-property: width; transition-duration: 0.5s; transition-timing-function: ease-out-elastic; }
+.goal-motivation { font-size: 28px; -unity-font-style: bold; color: #8FD1C5; align-self: center; margin-top: 20px; }
+
+/* --- Pet Level (Mock) --- */
+.level-container { width: 100%; background-color: #FFFFFF; border-radius: 40px; padding: 40px; }
+.level-header { flex-direction: row; justify-content: space-between; margin-bottom: 10px; }
+.level-title { font-size: 28px; color: #A08C7F; -unity-font-style: bold; }
+.level-number { font-size: 28px; color: #8FD1C5; -unity-font-style: bold; }
+.form-title { font-size: 45px; -unity-font-style: bold; color: #2D1B0A; margin-bottom: 20px; }
+.level-track { background-color: #F1F1F1; }
+.level-fill { background-color: #A9ECA4; }
+
+/* --- Bottom Navigation Menu --- */
+.bottom-menu-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    background-color: #FFFFFF;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding-bottom: 20px; /* Safe area for bottom screen swipes */
+    border-top-width: 2px;
+    border-color: #E2D5C4;
+}
+
+/* --- Map Viewer --- */
+.map-viewer-container { 
+    width: 100%; 
+    height: 450px; /* Adjust this height as needed */
+    background-color: #EAF4D3; 
+    border-radius: 60px; 
+    margin-bottom: 30px; 
+    overflow: hidden; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.map-render-surface { 
+    width: 100%; 
+    height: 100%; 
+}
+
+/* --- Inventory Modal --- */
+.modal-overlay {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+    justify-content: flex-end; /* Pushes the sheet to the bottom */
+    transition: opacity 0.3s ease-out-cubic;
+}
+
+.bottom-sheet {
+    width: 100%; height: 60%;
+    background-color: #FDF7EC;
+    border-top-left-radius: 60px; border-top-right-radius: 60px;
+    padding: 40px;
+    transition: translate 0.4s ease-out-cubic;
+}
+
+/* The Magic Hidden Class */
+.modal-hidden { opacity: 0; display: none; }
+.modal-hidden .bottom-sheet { translate: 0 100%; } /* Pushes sheet off the bottom of the screen */
+
+/* Header styling */
+.sheet-header { flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+.sheet-title { font-size: 50px; -unity-font-style: bold; color: #2D1B0A; }
+.close-btn { font-size: 40px; background-color: transparent; border-width: 0; color: #A08C7F; }
+
+/* Grid styling */
+.inventory-grid { flex-direction: row; flex-wrap: wrap; justify-content: space-between; }
+.item-slot { width: 30%; height: 200px; background-color: #FFFFFF; border-radius: 30px; border-width: 0; align-items: center; justify-content: center; margin-bottom: 30px; }
+.item-slot:active { scale: 0.95; background-color: #EAF4D3; } /* Nice click effect! */
+.item-icon { font-size: 60px; margin-bottom: 10px; }
+.item-name { font-size: 22px; color: #2D1B0A; -unity-font-style: bold; }
+.item-count { font-size: 24px; color: #8FD1C5; -unity-font-style: bold; position: absolute; top: 15px; right: 15px; }
+
+
+/* The active state classes */
+.nav-item-active .nav-icon { color: #8FD1C5; } /* Active Green */
+.nav-item-active .nav-text { color: #8FD1C5; } /* Active Green */
+
+/* --- IMPORTANT LAYOUT FIX --- */
+/* We need to push the rest of the screen up slightly so the bottom menu doesn't cover the Level progress bar */
+.screen-container {
+    padding-bottom: 160px; 
+}
+
+/* --- Info Alert Popup --- */
+.alert-overlay {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dims the screen behind the popup */
+    justify-content: center; align-items: center;
+    transition: opacity 0.2s; /* Fast, snappy fade */
+}
+
+/* The box itself */
+.alert-box {
+    background-color: #FFD166; /* A fun, bright golden-yellow! */
+    width: 80%; 
+    padding: 40px;
+    border-radius: 40px;
+    border-width: 6px; 
+    border-color: #FFFFFF;
+    align-items: center; 
+}
+
+/* --- Confirmation Buttons --- */
+.btn-confirm {
+    background-color: #4CAF50; /* Fun Green */
+    color: white;
+    font-size: 28px;
+    -unity-font-style: bold;
+    border-radius: 20px;
+    padding: 15px 30px;
+    border-width: 0;
+    width: 45%;
+}
+
+.btn-cancel {
+    background-color: #E0E0E0; /* Soft Gray */
+    color: #555555;
+    font-size: 28px;
+    -unity-font-style: bold;
+    border-radius: 20px;
+    padding: 15px 30px;
+    border-width: 0;
+    width: 45%;
+}
+
+.btn-confirm:active { background-color: #388E3C; }
+.btn-cancel:active { background-color: #BDBDBD; }
+
+/* Text Styling */
+.alert-title { font-size: 45px; -unity-font-style: bold; color: #2D1B0A; margin-bottom: 20px; white-space: normal; }
+.alert-desc { font-size: 28px; color: #4A3B2C; margin-bottom: 30px; white-space: normal; text-align: center; }
+.alert-hint { font-size: 20px; color: #A88647; -unity-font-style: bold; }
+
+/* Hidden state for animation */
+.alert-hidden { opacity: 0; display: none; }
+
+/* Popup Icon Styles */
+.alert-icon {
+    width: 60px;
+    height: 60px;
+    -unity-background-scale-mode: scale-to-fit;
+    margin-right: 15px;
+    display: none;
+}
+
+.icon-star { background-image: url('project://database/Assets/ICON_img/star.png'); display: flex; }
+.icon-fire { background-image: url('project://database/Assets/ICON_img/fire.png'); display: flex; }
+.icon-lighting { background-image: url('project://database/Assets/ICON_img/lighting.png'); display: flex; }
+.icon-satelite { background-image: url('project://database/Assets/ICON_img/satelite.png'); display: flex; }
+.icon-party { background-image: url('project://database/Assets/ICON_img/party.png'); display: flex; }
+.icon-robot { background-image: url('project://database/Assets/ICON_img/robot.png'); display: flex; }
+.icon-check { background-image: url('project://database/Assets/ICON_img/check-mark.png'); display: flex; }
+.icon-error { background-image: url('project://database/Assets/ICON_img/red-flag.png'); display: flex; }
+.icon-stop { background-image: url('project://database/Assets/ICON_img/stop.png'); display: flex; }
+.icon-close { background-image: url('project://database/Assets/ICON_img/close.png'); display: flex; width: 60px; height: 60px; -unity-background-scale-mode: scale-to-fit; }

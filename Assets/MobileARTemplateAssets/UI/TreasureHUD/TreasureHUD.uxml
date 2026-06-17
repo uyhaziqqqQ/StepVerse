@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="TreasureHUD.uss"/>
+    
+    <ui:VisualElement name="HudContainer" class="overlay hidden">
+        
+        <ui:VisualElement class="hud-card">
+            
+            <ui:VisualElement name="AlertPanel" class="alert-border hidden"/>
+
+            <ui:Label text="Treasure Nearby!" class="hud-title"/>
+            
+            <ui:Label name="RadarText" text="Target Distance: Calculating..." class="radar-text"/>
+
+            <!-- Fixed broken inline image resolution -->
+            <ui:Button name="BtnARScan" class="ar-scan-btn hidden" style="flex-direction: row; justify-content: center; align-items: center;">
+                <ui:VisualElement class="icon-camera"/>
+                <ui:Label text="Enter AR Mode!" class="ar-btn-text"/>
+            </ui:Button>
+
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

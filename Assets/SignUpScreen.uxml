@@ -1,0 +1,88 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/SignUpScreen.uss?fileID=7433441132597879392&amp;guid=e50b326321fa1ea43a2ddbe7a6096582&amp;type=3#SignUpScreen"/>
+    <ui:VisualElement name="root" class="root-container">
+        <ui:VisualElement name="bg" class="signup-bg"/>
+        <ui:ScrollView name="scroll-view" vertical-scroller-visibility="Hidden" class="scroll-view">
+            <ui:VisualElement name="content" class="content-container">
+                <ui:Button name="btn-back" class="btn-back">
+                    <ui:Label text="←" class="btn-back-label"/>
+                </ui:Button>
+                <ui:VisualElement name="header" class="header-group">
+                    <ui:Label name="title" text="Create Profile" class="page-title"/>
+                    <ui:Label name="subtitle" text="Ready to explore the world?" class="page-subtitle"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="avatar-wrapper" class="avatar-wrapper">
+                    <ui:VisualElement name="avatar-ring" class="avatar-ring">
+                        <ui:VisualElement name="avatar-image" class="avatar-image"/>
+                    </ui:VisualElement>
+                    <ui:Button name="btn-avatar-edit" class="btn-avatar-edit">
+                        <ui:Label text="✎" class="btn-avatar-edit-label"/>
+                    </ui:Button>
+                </ui:VisualElement>
+                <ui:VisualElement name="form" class="form-group">
+                    <ui:Label text="CODENAME" class="field-label"/>
+                    <ui:VisualElement name="field-username-wrap" class="input-wrap">
+                        <ui:TextField name="field-username" placeholder-text="Choose a username" class="input-field"/>
+                        <ui:Label text="🙂" class="input-suffix"/>
+                    </ui:VisualElement>
+                    <ui:Label text="EMAIL" class="field-label"/>
+                    <ui:VisualElement name="field-email-wrap" class="input-wrap">
+                        <ui:TextField name="field-email" placeholder-text="Enter your email" class="input-field"/>
+                    </ui:VisualElement>
+                    <ui:Label text="PASSWORD" class="field-label"/>
+                    <ui:VisualElement name="field-password-wrap" class="input-wrap">
+                        <ui:TextField name="field-password" placeholder-text="Create a password" password="true" class="input-field"/>
+                        <ui:Button name="btn-toggle-pw" class="btn-eye">
+                            <ui:Label name="eye-label" text="👁" class="eye-icon"/>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:Label text="CONFIRM PASSWORD" class="field-label"/>
+                    <ui:VisualElement name="field-confirm-wrap" class="input-wrap">
+                        <ui:TextField name="field-confirm" placeholder-text="Repeat your password" password="true" class="input-field"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Label text="YOUR JOURNEY" class="field-label journey-label"/>
+                <ui:VisualElement name="journey-cards" class="journey-cards">
+                    <ui:VisualElement name="card-steps" class="journey-card">
+                        <ui:VisualElement name="card-icon-steps" class="card-icon card-icon-green"/>
+                        <ui:VisualElement name="card-text" class="card-text">
+                            <ui:Label text="Step Tracking" class="card-title"/>
+                            <ui:Label text="Walk to earn energy" class="card-desc"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="card-explore" class="journey-card">
+                        <ui:VisualElement name="card-icon-explore" class="card-icon card-icon-orange"/>
+                        <ui:VisualElement name="card-text" class="card-text">
+                            <ui:Label text="Exploration" class="card-title"/>
+                            <ui:Label text="Discover hidden items" class="card-desc"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="card-companion" class="journey-card">
+                        <ui:VisualElement name="card-icon-companion" class="card-icon card-icon-yellow"/>
+                        <ui:VisualElement name="card-text" class="card-text">
+                            <ui:Label text="Companion" class="card-title"/>
+                            <ui:Label text="Grow your virtual pet" class="card-desc"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Label name="error-label" text="" class="error-label"/>
+                <ui:Button name="btn-submit" class="btn btn-submit">
+                    <ui:VisualElement class="btn-inner">
+                        <ui:Label text="Begin Your Journey" class="btn-label"/>
+                    </ui:VisualElement>
+                </ui:Button>
+                <ui:VisualElement name="login-redirect" class="login-redirect">
+                    <ui:Label text="Already have an account? " class="redirect-text"/>
+                    <ui:Button name="btn-login" class="btn-link">
+                        <ui:Label text="Sign In" class="btn-link-label"/>
+                    </ui:Button>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:ScrollView>
+        <ui:VisualElement name="loading-overlay" class="loading-overlay hidden">
+            <ui:VisualElement name="loading-card" class="loading-card">
+                <ui:Label text="Creating your profile..." class="loading-text"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
